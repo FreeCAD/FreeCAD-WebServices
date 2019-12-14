@@ -15,15 +15,18 @@ infrastructure easier.
 
 The web services currently in use are:
 
-* Forum - phpBB
-* Homepage - static HTML+JS+CSS
-* Issue Tracker - MantisBT
-* Wiki - MediaWiki
+* Forum - `phpBB <https://www.phpbb.com/>`_
+* Homepage - static HTML+JS+CSS `on GitHub
+  <https://github.com/freecad/freecad-homepage>`_
+* Issue Tracker - `MantisBT <https://mantisbt.org/>`_
+* Wiki - `MediaWiki <https://www.mediawiki.org/wiki/MediaWiki>`_
 
-with a backing MySQL database.
+with a backing `MySQL <https://www.mysql.com/>`_ database.
 
 Future experimental web services may be included. Vagrant also supports cloud
-deployment targets such as AWS or Digital Ocean, so in the future it may be
+deployment targets such as `Digital Ocean
+<https://github.com/devopsgroup-io/vagrant-digitalocean>`_ or `Linode
+<https://github.com/displague/vagrant-linode>`_, so in the future it may be
 possible to use this repo to directly deploy and manage our infrastructure.
 
 \* eventually
