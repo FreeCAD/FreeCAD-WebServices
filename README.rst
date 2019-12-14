@@ -10,12 +10,19 @@ forums but no posts or user data. While the repo and instructions target recent
 Debian/Ubuntu systems, pull requests are welcome to expand that, as well as
 support for Docker, Vagrant + VirtualBox or the like.
 
+The goal of this repo is to make maintenance & development of our web service
+infrastructure easier.
+
 The web services currently in use are:
 
 * Forum - phpBB
 * Homepage - static HTML+JS+CSS
 * Issue Tracker - MantisBT
 * Wiki - MediaWiki
+
+Future experimental web services may be included. Vagrant also supports cloud
+deployment targets such as AWS or Digital Ocean, so in the future it may be
+possible to use this repo to directly deploy and manage our infrastructure.
 
 \* eventually
 
