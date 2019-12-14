@@ -1,0 +1,15 @@
+---
+- hosts: all
+  tasks:
+
+    - name: update packages
+      apt:
+        update_cache: yes
+        upgrade: full
+
+    - name: install baseline packages
+      apt:
+        name: aptitude
+        state: present
+
+...

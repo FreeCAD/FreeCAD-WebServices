@@ -1,0 +1,16 @@
+---
+- hosts: all
+  tasks:
+
+    - name: install mantisbt requirements
+      apt:
+        name: nginx
+        state: present
+
+    # TODO: Complete these & separate into tracker.yaml playbook
+    # - name: install mantisbt requirements
+    # - name: get mantisbt sources
+    # - name: deploy config
+    # - name: restore from backup
+    # - name: bring mantisbt online
+...

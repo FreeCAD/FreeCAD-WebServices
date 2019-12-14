@@ -1,0 +1,29 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+ENV["VAGRANT_DEFAULT_PROVIDER"] = "lxd"
+
+Vagrant.configure("2") do |config|
+    config.vm.synced_folder './', '/vagrant', disabled: true
+
+    # Baseline configuration
+    config.vm.provision "ansible" do |ans|
+      ans.playbook = "playbooks/playbook.yaml"
+      ans.compatibility_mode = "2.0"
+      ans.become = true
+      ans.extra_vars = { ansible_python_interpreter:"/usr/bin/python3" }
+    end
+
+    config.vm.define "tracker" do |srv|
+        srv.vm.box = "debian/buster64"
+        srv.vm.provider 'lxd' do |lxd|
+            lxd.name = 'tracker'
+        end
+        srv.vm.provision "ansible" do |ans|
+          ans.playbook = "playbooks/tracker.yaml"
+          ans.compatibility_mode = "2.0"
+          ans.become = true
+          ans.extra_vars = { ansible_python_interpreter:"/usr/bin/python3" }
+        end
+    end
+end
