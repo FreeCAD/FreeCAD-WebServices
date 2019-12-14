@@ -77,6 +77,11 @@ Stand up a single service or all at once::
     $ vagrant up forum
     $ vagrant up  # stands up forum, tracker, wiki, homepage
 
+Test Ansible provisioning or get shell access for development::
+
+    $ vagrant provision wiki
+    $ vagrant ssh wiki
+
 Clean up afterward::
 
     $ vagrant halt forum  # free up resources but don't erase
