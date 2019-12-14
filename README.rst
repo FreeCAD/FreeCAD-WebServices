@@ -10,6 +10,13 @@ forums but no posts or user data. While the repo and instructions target recent
 Debian/Ubuntu systems, pull requests are welcome to expand that, as well as
 support for Docker, Vagrant + VirtualBox or the like.
 
+The web services currently in use are:
+
+* Forum - phpBB
+* Homepage - static HTML+JS+CSS
+* Issue Tracker - MantisBT
+* Wiki - MediaWiki
+
 \* eventually
 
 Requirements & Installation
