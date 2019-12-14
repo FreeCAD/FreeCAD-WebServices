@@ -20,6 +20,8 @@ The web services currently in use are:
 * Issue Tracker - MantisBT
 * Wiki - MediaWiki
 
+with a backing MySQL database.
+
 Future experimental web services may be included. Vagrant also supports cloud
 deployment targets such as AWS or Digital Ocean, so in the future it may be
 possible to use this repo to directly deploy and manage our infrastructure.
