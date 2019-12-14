@@ -61,8 +61,7 @@ download ``vagrant`` directly from upstream. So, instead you can do::
 
 without restarting.
 
-Additional documentation specific to the LXD and Libvirt providers is available
-in the ``libvirt/`` and ``lxd/`` directories.
+See additional provider-specific documentation: `<lxd/README.rst>`_.
 
 Usage
 -----
