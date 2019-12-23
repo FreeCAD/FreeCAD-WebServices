@@ -2,14 +2,12 @@
 - hosts: all
   tasks:
 
-    - name: update packages
-      apt:
-        update_cache: yes
-        upgrade: full
-
-    - name: install baseline packages
-      apt:
-        name: aptitude
-        state: present
+  - name: update apt packages
+    become: true
+    apt:
+      force_apt_get: true
+      update_cache: true
+      upgrade: safe
+      cache_valid_time: 3600
 
 ...
