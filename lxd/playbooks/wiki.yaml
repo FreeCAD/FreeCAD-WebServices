@@ -1,7 +1,7 @@
 ---
 - hosts: all
   vars:
-    hostname: tracker
+    hostname: wiki
   tasks:
 
     - name: set hostname
@@ -13,20 +13,25 @@
         src: etc_hosts.j2
         dest: /etc/hosts
 
-    - name: install mantisbt requirements
+    - name: install mediawiki requirements
       apt:
         name: 
-          - nginx
           - default-mysql-server
+          - imagemagick
+          - nginx
           - php-mysql
           - php-mbstring
+          - php-apcu
+          - php-intl
+          - php-gd
+          - php-cli
+          - php-curl
         state: present
 
-    # TODO: Complete these & separate into tracker.yaml playbook
-    # - name: install mantisbt requirements
-    # - name: get mantisbt sources
-    # $ wget https://sourceforge.net/projects/mantisbt/files/mantis-stable/2.23.0/mantisbt-2.23.0.tar.gz
+    # TODO: Complete these for wiki.yaml playbook
+    # - name: get mediawiki sources
+    # $ wget https://releases.wikimedia.org/mediawiki/1.34/mediawiki-1.34.0.tar.gz
     # - name: deploy config
     # - name: restore from backup
-    # - name: bring mantisbt online
+    # - name: bring mediawiki online
 ...
