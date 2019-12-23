@@ -1,0 +1,32 @@
+---
+- hosts: all
+  vars:
+    hostname: tracker
+  tasks:
+
+    - name: set hostname
+      hostname:
+        name: "{{ hostname }}"
+
+    - name: configure /etc/hosts
+      template:
+        src: etc_hosts.j2
+        dest: /etc/hosts
+
+    - name: install mantisbt requirements
+      apt:
+        name: 
+          - nginx
+          - default-mysql-server
+          - php-mysql
+          - php-mbstring
+        state: present
+
+    # TODO: Complete these & separate into tracker.yaml playbook
+    # - name: install mantisbt requirements
+    # - name: get mantisbt sources
+    # $ wget https://sourceforge.net/projects/mantisbt/files/mantis-stable/2.23.0/mantisbt-2.23.0.tar.gz
+    # - name: deploy config
+    # - name: restore from backup
+    # - name: bring mantisbt online
+...
