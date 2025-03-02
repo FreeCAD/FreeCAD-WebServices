@@ -1,6 +1,10 @@
 Introduction
 ------------
 
+NOTE: This information is preserved for historical reasons, and no longer
+represents the current state of FreeCAD's infrastructure. This repository
+is now archived. 1 March 2025
+
 This repository contains an infrastructure-as-code representation of FreeCAD's
 web services. Using Vagrant as a provisioning frontend to LXD containers and
 Libvirt VMs configured by Ansible playbooks, one can* stand up any or all of the
